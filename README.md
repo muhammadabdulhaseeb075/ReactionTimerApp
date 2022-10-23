@@ -49,3 +49,18 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 8- [beforeUnmount] & [Unmounted] hook => 
 - So once the component no longer needed on the screen in the browser, it's removed. 
 - These two hooks are being used for removal of the component 
+
+[Note] If I want to use above lifecycle hooks, we want to use them directly into components. 
+- e.g. in export default => mounted(){
+
+ }
+
+- unmounted(){} This component fires when you do routing from page to page, If we navigate away from page, component on that page will unmount
+
+### Creating a Timer
+### Custom events with data
+- If we want to show results/Reaction into Results.vue inside App.vue[The root component] below the Block.vue
+* Query[Imp] - Show Results [ReactionTime] inside of Block.vue component to App.vue passing down to Results component
+Ans: We will do this by emitting  a custom event from the block component
+
+- When we send a custom event or emit a custom event, we will send along with it some extra data
